@@ -21,7 +21,7 @@ namespace test_chatGPT
         private async void Form1_LoadAsync(object sender, EventArgs e)
         {
 
-            var openai = new OpenAIAPI(new APIAuthentication("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"));
+            var openai = new OpenAIAPI(new APIAuthentication("<API Key>"));
             var conversation = openai.Chat.CreateConversation();
             conversation.AppendUserInput("How to write to console: ");
             var response = await conversation.GetResponseFromChatbotAsync();
